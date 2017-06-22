@@ -8,11 +8,10 @@ var crypto = require('crypto');
 // where the function is called multiple times
 var result;
 
-function copyFiles(files) {
+function copyFiles(files, book, tmpobj) {
     var copiedFiles = []
 
     files.forEach(function(file) {
-        
         var origin = book.resolve(file);
 
         var filename = hash(origin) + '-' + path.basename(origin);
@@ -23,6 +22,8 @@ function copyFiles(files) {
 
         copiedFiles.push(filename);
     });
+
+    return copiedFiles
 }
 
 function getAssets() {
@@ -31,12 +32,12 @@ function getAssets() {
         var tmpobj = tmp.dirSync();
         var js = this.config.get('pluginsConfig.scripts-styles.js', []);
         var css = this.config.get('pluginsConfig.scripts-styles.css', []);
-        var jsfiles = copyFiles(js);
-        var cssFiles = copyFiles(css);
+        var jsFiles = copyFiles(js, book, tmpobj);
+        var cssFiles = copyFiles(css, book, tmpobj);
 
         result = {
             assets: tmpobj.name,
-            js: jsfiles,
+            js: jsFiles,
             css: cssFiles
         };
     }
