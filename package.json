@@ -1,0 +1,25 @@
+{
+    "name": "gitbook-plugin-scripts-styles",
+    "version": "0.0.1",
+    "main": "index.js",
+    "description": "Add scripts and styles to your gitbook pages",
+    "engines": {
+        "gitbook": ">1.x.x"
+    },
+    "gitbook": {
+        "properties": {
+            "scripts-styles": {
+                "type": "object",
+                "title": "custom scripts and styles",
+                "properties": {
+                    "js": {
+                        "type": "array"
+                    },
+                    "css": {
+                        "type": "array"
+                    }
+                }
+            }
+        }
+    }
+}
