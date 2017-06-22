@@ -6,6 +6,19 @@
     "engines": {
         "gitbook": ">1.x.x"
     },
+    "dependencies": {
+        "tmp": "0.0.28",
+        "lodash": "*"
+    },
+    "author": "Erez Odier <erez.odier@gmail.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mwerezi/gitbook-plugin-scripts-styles.git"
+    },
+    "bugs": {
+        "url": "https://github.com/mwerezi/gitbook-plugin-scripts-styles/issues"
+    },
     "gitbook": {
         "properties": {
             "scripts-styles": {
