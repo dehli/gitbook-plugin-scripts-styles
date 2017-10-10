@@ -8,7 +8,7 @@ Based on the plugin-scripts plugin
 
 ```js
 {
-    "plugins": ["scripts"],
+    "plugins": ["scripts-styles"],
     "pluginsConfig": {
         "scripts-styles": {
             "js": [
